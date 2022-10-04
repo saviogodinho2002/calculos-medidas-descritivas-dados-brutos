@@ -4,12 +4,11 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.print.StreamPrintService;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		File filePeso = new File("peso.txt");
 		File fileIdade = new File("idade.txt");
 		File fileAltura = new File("altura.txt");
@@ -30,11 +29,11 @@ public class Main {
 			
 			ColumnWithClassInterval columnWithPeso = new ColumnWithClassInterval(datas);
 			
-			outputString +=("---------"+filePeso.getName()+"-----------\n");
-			outputString +=("Sem intevalo de classe\n");
+			outputString +=("\n---------"+filePeso.getName()+"-----------\n");
+			outputString +=("\n\nSem intevalo de classe\n\n");
 			
 			outputString +=(columnWithoutPeso.getRelatorio());
-			outputString +=("\nCom intervalo de classe\n");
+			outputString +=("\n\nCom intervalo de classe\n\n");
 			
 			outputString +=(columnWithPeso.getRelatorio());
 			////
@@ -51,11 +50,11 @@ public class Main {
 			
 			ColumnWithClassInterval columnWithIdade = new ColumnWithClassInterval(datas);
 			
-			outputString +=("---------"+fileIdade.getName()+"-----------\n");
-			outputString +=("Sem intevalo de classe\n");
+			outputString +=("\n---------"+fileIdade.getName()+"-----------\n");
+			outputString +=("\n\nSem intevalo de classe\n\n");
 			
 			outputString +=(columnWithoutIdade.getRelatorio());
-			outputString +=("\nCom intervalo de classe\n");
+			outputString +=("\n\nCom intervalo de classe\n\n");
 			
 			outputString +=(columnWithIdade.getRelatorio());
 			
@@ -74,11 +73,11 @@ public class Main {
 			
 			ColumnWithClassInterval columnWithAltura = new ColumnWithClassInterval(datas);
 			
-			outputString +=("---------"+fileAltura.getName()+"-----------\n");
-			outputString +=("Sem intevalo de classe\n");
+			outputString +=("\n---------"+fileAltura.getName()+"-----------\n");
+			outputString +=("\n\nSem intevalo de classe\n\n");
 			fileAltura.getName();
 			outputString +=(columnWithoutAltura.getRelatorio());
-			outputString +=("\nCom intervalo de classe\n");
+			outputString +=("\n\nCom intervalo de classe\n\n");
 			
 			outputString +=(columnWithAltura.getRelatorio());
 			
@@ -86,7 +85,7 @@ public class Main {
 			PrintStream out = new PrintStream("saida.txt");
 			out.print( outputString );;
 			
-			
+			System.out.println(outputString);
 			
 			
 			
